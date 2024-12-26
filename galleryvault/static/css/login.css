@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    }
+.login-container {
+    background-color: #ffffff; /* White background for the form */
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    }
+.login-container h1 {
+    margin-bottom: 20px;
+    color: #4682b4; /* Darker blue for headings */
+    text-align: center;
+    }
+.login-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #5f9ea0; /* Medium blue for labels */
+    font-weight: bold;
+    }
+.login-container input[type="text"],
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    }
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4682b4; /* Darker blue button */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    }
+.login-container button:hover {
+    background-color: #5f9ea0; /* Slightly lighter blue on hover */
+    }
+.login-container p {
+    text-align: center;
+    margin-top: 20px;
+    color: #5f9ea0;
+    }
+.login-container a {
+    color: #4682b4;
+    text-decoration: none;
+    }
+.login-container a:hover {
+    text-decoration: underline;
+    }
