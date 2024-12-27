@@ -3,11 +3,15 @@ from .models import *
 
 def login(request):
     if request.method=='POST':
-        name=request.POST['name']
-        username=request.POST['username']
         email=request.POST['email']
         password=request.POST['password']
-        print(name,username,email,password)
+        users=user.objects.all()
+        for i in users:
+            if email==i.email and password==i.password:
+                request.session['login']=i.pk
+                return redirect(home)
+            else:
+                return redirect(login)
     return render(request,'login.html')
 
 def register(request):
@@ -22,6 +26,12 @@ def register(request):
     return render(request,'register.html')
 
 def home(request):
-    return render(request,'home.html')
+    if 'login' in request.session:
+        users=user.objects.all()
+        print(users)
+        return render(request,'home.html',{user:users})
+    else:
+        return redirect(login)
+        
 
 # Create your views here.
